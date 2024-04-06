@@ -1,4 +1,9 @@
-Sum Tree
+#include<iostream>
+struct Node{
+    Node* left;
+    Node* right;
+    int data;
+};
 /*
 Given a Binary Tree. Return true if, for every node X in the tree other than the leaves, 
 its value is equal to the sum of its left subtree's value and its right subtree's value. 
