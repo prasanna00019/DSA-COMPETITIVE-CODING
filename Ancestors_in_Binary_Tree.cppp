@@ -1,0 +1,15 @@
+// https://www.geeksforgeeks.org/problems/ancestors-in-binary-tree/1
+ bool helper(vector<int>&v,int t,Node* root){
+        if(root==NULL){return false;}
+        if(root->data==t){return true;}
+        if(helper(v,t,root->left)|| helper(v,t,root->right)){
+            v.push_back(root->data);
+            return true;
+        }
+        return false;
+    }
+  vector<int> Ancestors(struct Node *root, int target) {
+        vector<int>v;
+        helper(v,target,v);
+        return v;
+    }
